@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-01-06T11:35:17.695408" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Steps" source="c:\Development\projeto_robot\test\login_steps.robot">
+<test id="s1-t1" name="Unsuccesful Login - No password" line="31">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-01-06T11:35:17.950888" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-06T11:35:17.949754" elapsed="1.138463"/>
+</kw>
+<kw name="I navigate to the login page" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-06T11:35:19.095631" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-06T11:35:19.090380" elapsed="1.285859"/>
+</kw>
+<arg>${URL}</arg>
+<status status="PASS" start="2025-01-06T11:35:19.089390" elapsed="1.287212"/>
+</kw>
+<kw name="I input only the username" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-06T11:35:20.378415" elapsed="0.023479"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-06T11:35:20.402543" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-06T11:35:20.402149" elapsed="0.099780"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-01-06T11:35:20.377421" elapsed="0.124724"/>
+</kw>
+<kw name="I click in login button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-06T11:35:20.504790" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-06T11:35:20.504092" elapsed="0.084960"/>
+</kw>
+<status status="PASS" start="2025-01-06T11:35:20.503265" elapsed="0.085980"/>
+</kw>
+<kw name="I am able to see the expected error message" owner="login_keywords">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>class=error-message-container</arg>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-01-06T11:35:20.590321" elapsed="0.021975"/>
+</kw>
+<arg>Epic sadface: Password is required</arg>
+<status status="PASS" start="2025-01-06T11:35:20.589844" elapsed="0.022648"/>
+</kw>
+<status status="PASS" start="2025-01-06T11:35:17.948381" elapsed="2.664479"/>
+</test>
+<status status="PASS" start="2025-01-06T11:35:17.701552" elapsed="2.912523"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Steps">Login Steps</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
